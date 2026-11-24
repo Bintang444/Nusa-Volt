@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NusaVolt - Energi untuk Indonesia yang Lebih Hijau</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        nusadark: '#0A2540',
+                        nusagreen: '#4CAF50',
+                        nusalime: '#8BC34A',
+                        nusateal: '#009688',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-curve {
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+        }
+        @media (min-width: 768px) {
+            .hero-curve {
+                border-bottom-left-radius: 6rem;
+                border-bottom-right-radius: 6rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-nusagreen selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/70 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo NusaVolt -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-nusateal to-nusalime flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display font-extrabold text-2xl text-nusadark tracking-tight">Nusa<span class="text-nusagreen">Volt</span></span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#tentang" class="text-sm font-medium text-slate-600 hover:text-nusagreen transition-colors">Tentang Kami</a>
+                    <a href="#keunggulan" class="text-sm font-medium text-slate-600 hover:text-nusagreen transition-colors">Mengapa Energi Surya?</a>
+                    <a href="#layanan" class="text-sm font-medium text-slate-600 hover:text-nusagreen transition-colors">Layanan Kami</a>
+                    <a href="#proses" class="text-sm font-medium text-slate-600 hover:text-nusagreen transition-colors">Proses Instalasi</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Toggle -->
+                <div class="flex items-center gap-3">
+                    <a href="#kontak" class="hidden sm:inline-flex items-center gap-2 bg-nusadark hover:bg-nusagreen text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-sm transition-all duration-300">
+                        <span>Konsultasi Gratis</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-nusadark hover:bg-slate-100 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#tentang" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-nusagreen">Tentang Kami</a>
+            <a href="#keunggulan" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-nusagreen">Mengapa Energi Surya?</a>
+            <a href="#layanan" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-nusagreen">Layanan Kami</a>
+            <a href="#proses" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-nusagreen">Proses Instalasi</a>
+            <div class="pt-2">
+                <a href="#kontak" class="block w-full text-center bg-nusagreen text-white font-semibold py-3 rounded-xl shadow">Hubungi Kami Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-nusadark text-white overflow-hidden hero-curve">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-nusagreen/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-nusalime/20 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-nusalime text-sm font-medium">
+                        <i data-lucide="leaf" class="w-4 h-4"></i>
+                        <span>Energi untuk Indonesia yang Lebih Hijau</span>
+                    </div>
+                    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight">
+                        Solusi <span class="text-transparent bg-clip-text bg-gradient-to-r from-nusalime to-emerald-400">Energi Surya</span> untuk Masa Depan
+                    </h1>
+                    <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Hemat biaya listrik jangka panjang dan wujudkan kemandirian energi ramah lingkungan bersama sistem panel surya terpadu dari NusaVolt.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#kalkulator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-nusagreen to-nusalime hover:opacity-95 text-white font-bold shadow-lg shadow-nusagreen/30 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                            <span>Simulasi Penghematan</span>
+                        </a>
+                        <a href="#layanan" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold transition-all flex items-center justify-center gap-2">
+                            <span>Jelajahi Layanan</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.src='https://placehold.co/800x600/0A2540/8BC34A?text=Panel+Surya+NusaVolt'"
+                            alt="Instalasi Panel Surya Modern NusaVolt" 
+                            class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-nusadark/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between bg-white/95 backdrop-blur-md p-4 rounded-2xl text-nusadark shadow-lg">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-xl bg-nusagreen/15 text-nusagreen flex items-center justify-center">
+                                    <i data-lucide="sun" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Efisiensi Energi Optimal</p>
+                                    <p class="font-bold text-sm sm:text-base">Teknologi Andal & Berkelanjutan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Image Grid -->
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.src='https://placehold.co/800x550/4CAF50/FFFFFF?text=Tentang+NusaVolt'"
+                            alt="Pembangkit Listrik Tenaga Surya" 
+                            class="w-full h-80 sm:h-[420px] object-cover"
+                        >
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-6 bg-nusadark text-white p-6 rounded-2xl shadow-xl max-w-xs border-b-4 border-nusalime">
+                        <p class="font-display font-bold text-lg text-nusalime mb-1">Komitmen Hijau</p>
+                        <p class="text-sm text-slate-300">Bersama NusaVolt, menuju Indonesia yang lebih hijau dan bersih.</p>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-nusagreen font-bold text-sm uppercase tracking-wider">Tentang Kami</span>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-nusadark mt-2">
+                            Mitra Terpercaya Transisi Energi Terbarukan Anda
+                        </h2>
+                        <div class="w-16 h-1.5 bg-nusalime rounded-full mt-4"></div>
+                    </div>
+
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Kami adalah perusahaan penyedia solusi energi terbarukan dengan fokus pada pemanfaatan tenaga surya untuk masa depan yang lebih hijau dan berkelanjutan.
+                    </p>
+
+                    <!-- 3 Pilar Utama dari Brosur -->
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-nusagreen/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-nusadark text-nusalime flex items-center justify-center shrink-0">
+                                <i data-lucide="leaf" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-nusadark text-lg">Energi Bersih dan Terbarukan</h3>
+                                <p class="text-sm text-slate-500">Memanfaatkan sumber daya matahari alami tanpa polusi udara.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-nusagreen/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-nusadark text-nusalime flex items-center justify-center shrink-0">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-nusadark text-lg">Teknologi Andal dan Efisien</h3>
+                                <p class="text-sm text-slate-500">Komponen berstandar internasional dengan daya tahan jangka panjang.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-nusagreen/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-nusadark text-nusalime flex items-center justify-center shrink-0">
+                                <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-nusadark text-lg">Mendukung Lingkungan</h3>
+                                <p class="text-sm text-slate-500">Kontribusi nyata dalam menjaga kelestarian bumi bagi generasi mendatang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa Energi Surya? Section -->
+    <section id="keunggulan" class="py-20 bg-white border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-nusagreen font-bold text-sm uppercase tracking-wider">Keunggulan Utama</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-nusadark mt-2">
+                    Mengapa Energi Surya?
+                </h2>
+                <div class="w-16 h-1.5 bg-nusalime rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="p-7 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-nusadark hover:text-white group transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-nusagreen text-white flex items-center justify-center mb-6 shadow-md shadow-nusagreen/25 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-nusadark group-hover:text-white mb-2">Hemat Biaya Listrik</h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                        dalam Jangka Panjang — Tekan tagihan listrik bulanan rumah maupun operasional bisnis Anda secara signifikan.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-7 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-nusadark hover:text-white group transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-nusagreen text-white flex items-center justify-center mb-6 shadow-md shadow-nusagreen/25 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sprout" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-nusadark group-hover:text-white mb-2">Ramah Lingkungan</h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                        Mengurangi Emisi Karbon — Beralih ke energi bersih yang menurunkan jejak karbon secara drastis.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-7 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-nusadark hover:text-white group transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-nusagreen text-white flex items-center justify-center mb-6 shadow-md shadow-nusagreen/25 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sun" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-nusadark group-hover:text-white mb-2">Sumber Energi Tak Terbatas</h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                        dari Matahari — Indonesia memiliki potensi sinar matahari melimpah sepanjang tahun untuk pasokan energi stabil.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-7 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-nusadark hover:text-white group transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-nusagreen text-white flex items-center justify-center mb-6 shadow-md shadow-nusagreen/25 group-hover:scale-110 transition-transform">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-nusadark group-hover:text-white mb-2">Investasi Cerdas</h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed">
+                        untuk Masa Depan — Meningkatkan nilai properti sekaligus memberikan imbal hasil investasi jangka panjang.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami Section -->
+    <section id="layanan" class="py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-nusagreen font-bold text-sm uppercase tracking-wider">Solusi Terpadu</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-nusadark mt-2">
+                    Layanan Kami
+                </h2>
+                <div class="w-16 h-1.5 bg-nusalime rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Layanan 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-nusadark text-white flex items-center justify-center mb-6">
+                            <i data-lucide="home" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-nusadark mb-2">Instalasi Panel Surya</h3>
+                        <span class="inline-block px-3 py-1 rounded-full bg-nusagreen/10 text-nusagreen font-semibold text-xs mb-4">untuk Rumah & Bisnis</span>
+                        <p class="text-slate-600 leading-relaxed">
+                            Perancangan dan pemasangan sistem PLTS atap yang presisi, aman, dan estetis untuk kebutuhan residensial, perkantoran, maupun industri.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100">
+                        <a href="#kontak" class="inline-flex items-center gap-2 text-nusadark font-bold text-sm hover:text-nusagreen transition-colors">
+                            <span>Ajukan Instalasi</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-nusadark text-white flex items-center justify-center mb-6">
+                            <i data-lucide="wrench" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-nusadark mb-2">Perawatan Sistem</h3>
+                        <span class="inline-block px-3 py-1 rounded-full bg-nusagreen/10 text-nusagreen font-semibold text-xs mb-4">agar selalu optimal</span>
+                        <p class="text-slate-600 leading-relaxed">
+                            Layanan pembersihan panel, pengecekan inverter, dan inspeksi teknis berkala agar produksi listrik tenaga surya selalu berada pada efisiensi puncak.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100">
+                        <a href="#kontak" class="inline-flex items-center gap-2 text-nusadark font-bold text-sm hover:text-nusagreen transition-colors">
+                            <span>Jadwalkan Perawatan</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-nusadark text-white flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-nusadark mb-2">Konsultasi Energi</h3>
+                        <span class="inline-block px-3 py-1 rounded-full bg-nusagreen/10 text-nusagreen font-semibold text-xs mb-4">untuk kebutuhan Anda</span>
+                        <p class="text-slate-600 leading-relaxed">
+                            Audit kebutuhan daya listrik, perhitungan kapasitas sistem ideal, serta analisis pengembalian investasi (ROI) bersama tim ahli energi kami.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100">
+                        <a href="#kontak" class="inline-flex items-center gap-2 text-nusadark font-bold text-sm hover:text-nusagreen transition-colors">
+                            <span>Mulai Konsultasi</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulasi Kalkulator Penghematan Interaktif -->
+    <section id="kalkulator" class="py-16 bg-gradient-to-br from-nusadark to-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <span class="inline-block px-3 py-1 rounded-full bg-nusalime/20 text-nusalime text-xs font-bold uppercase tracking-wider">Kalkulator Estimasi</span>
+                        <h2 class="font-display font-bold text-2xl sm:text-3xl">Hitung Potensi Penghematan Anda</h2>
+                        <p class="text-slate-300 text-sm">Geser rata-rata tagihan listrik bulanan Anda untuk melihat estimasi penghematan dan pengurangan emisi karbon dengan panel surya NusaVolt.</p>
+                        
+                        <div class="pt-2">
+                            <div class="flex justify-between items-end mb-2">
+                                <label for="bill-slider" class="text-sm font-medium text-slate-300">Tagihan Listrik Bulanan:</label>
+                                <span id="bill-display" class="font-display font-extrabold text-2xl text-nusalime">Rp 2.500.000</span>
+                            </div>
+                            <input type="range" id="bill-slider" min="500000" max="25000000" step="250000" value="2500000" class="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-nusalime">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>Rp 500 rb</span>
+                                <span>Rp 12,5 jt</span>
+                                <span>Rp 25 jt</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-nusadark/90 border border-white/10 rounded-2xl p-6 space-y-4">
+                        <div class="border-b border-white/10 pb-3">
+                            <p class="text-xs text-slate-400">Estimasi Penghematan / Tahun</p>
+                            <p id="yearly-saving" class="font-display font-extrabold text-2xl sm:text-3xl text-emerald-400 mt-0.5">Rp 18.000.000</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-xs text-slate-400">Rekomendasi Sistem</p>
+                                <p id="system-size" class="font-bold text-lg text-white mt-0.5">3.3 kWp</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Reduksi CO₂ / Tahun</p>
+                                <p id="co2-saved" class="font-bold text-lg text-nusalime mt-0.5">3.1 Ton</p>
+                            </div>
+                        </div>
+                        <a href="#kontak" class="block w-full text-center bg-nusagreen hover:bg-nusalime text-white font-bold py-3 rounded-xl text-sm transition-colors mt-2">
+                            Dapatkan Penawaran Rinci
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proses Instalasi Section -->
+    <section id="proses" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Steps Column -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <span class="text-nusagreen font-bold text-sm uppercase tracking-wider">Langkah Mudah</span>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-nusadark mt-2">
+                            Proses Instalasi
+                        </h2>
+                        <div class="w-16 h-1.5 bg-nusalime rounded-full mt-4"></div>
+                    </div>
+
+                    <!-- Timeline Steps sesuai brosur -->
+                    <div class="relative space-y-6 before:absolute before:inset-0 before:ml-6 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-nusagreen before:via-nusalime before:to-nusadark">
+                        
+                        <!-- Step 1 -->
+                        <div class="relative flex items-start gap-6">
+                            <div class="w-12 h-12 rounded-full bg-nusagreen text-white font-display font-extrabold text-lg flex items-center justify-center shrink-0 shadow-md z-10 ring-4 ring-white">
+                                1
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex-1">
+                                <h3 class="font-display font-bold text-xl text-nusadark">Konsultasi</h3>
+                                <p class="text-slate-600 text-sm mt-1">Diskusi kebutuhan energi Anda bersama tim konsultan NusaVolt untuk menentukan solusi terbaik.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative flex items-start gap-6">
+                            <div class="w-12 h-12 rounded-full bg-nusagreen text-white font-display font-extrabold text-lg flex items-center justify-center shrink-0 shadow-md z-10 ring-4 ring-white">
+                                2
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex-1">
+                                <h3 class="font-display font-bold text-xl text-nusadark">Survei Lokasi</h3>
+                                <p class="text-slate-600 text-sm mt-1">Pemeriksaan kondisi atap, arah pencahayaan matahari, dan area pemasangan secara menyeluruh.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative flex items-start gap-6">
+                            <div class="w-12 h-12 rounded-full bg-nusagreen text-white font-display font-extrabold text-lg flex items-center justify-center shrink-0 shadow-md z-10 ring-4 ring-white">
+                                3
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex-1">
+                                <h3 class="font-display font-bold text-xl text-nusadark">Instalasi</h3>
+                                <p class="text-slate-600 text-sm mt-1">Pemasangan sistem panel surya oleh teknisi bersertifikat dengan standar keamanan tinggi.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative flex items-start gap-6">
+                            <div class="w-12 h-12 rounded-full bg-nusagreen text-white font-display font-extrabold text-lg flex items-center justify-center shrink-0 shadow-md z-10 ring-4 ring-white">
+                                4
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex-1">
+                                <h3 class="font-display font-bold text-xl text-nusadark">Monitoring & Perawatan</h3>
+                                <p class="text-slate-600 text-sm mt-1">Pemantauan berkala melalui aplikasi dan perawatan rutin untuk performa maksimal.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- House Image Column -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80" 
+                            onerror="this.src='https://placehold.co/700x850/0A2540/FFFFFF?text=Rumah+Panel+Surya'"
+                            alt="Rumah Modern dengan Panel Surya" 
+                            class="w-full h-[460px] object-cover"
+                        >
+                        <div class="absolute bottom-0 inset-x-0 bg-nusadark/95 p-6 text-center text-white border-t-4 border-nusagreen">
+                            <p class="font-display font-bold text-lg italic">"Bersama NusaVolt, menuju Indonesia yang lebih hijau."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hubungi Kami / Footer Section -->
+    <footer id="kontak" class="bg-nusadark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+                
+                <!-- Kolom Info Kontak (Sesuai Brosur) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="font-display font-extrabold text-3xl text-white">Hubungi Kami</h2>
+                        <div class="w-14 h-1.5 bg-nusalime rounded-full mt-3"></div>
+                        <p class="text-slate-300 mt-4 text-sm leading-relaxed">
+                            Siap beralih ke energi bersih? Hubungi tim NusaVolt untuk konsultasi gratis dan survei lokasi Anda.
+                        </p>
+                    </div>
+
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3.5">
+                            <div class="w-9 h-9 rounded-xl bg-white/10 text-nusalime flex items-center justify-center shrink-0 mt-0.5">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-xs">Alamat Kantor</p>
+                                <p class="font-medium text-white">Jl. Energi Hijau No. 123, Bandung, Indonesia</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-xl bg-white/10 text-nusalime flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-xs">Telepon / WhatsApp</p>
+                                <a href="tel:+6281234567890" class="font-medium text-white hover:text-nusalime transition-colors">+62 812 3456 7890</a>
+                            </div>
+                        </li>
+
+                        <li class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-xl bg-white/10 text-nusalime flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-xs">Email</p>
+                                <a href="mailto:halo@nusavolt.id" class="font-medium text-white hover:text-nusalime transition-colors">halo@nusavolt.id</a>
+                            </div>
+                        </li>
+
+                        <li class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-xl bg-white/10 text-nusalime flex items-center justify-center shrink-0">
+                                <i data-lucide="globe" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-xs">Website & Instagram</p>
+                                <p class="font-medium text-white">www.nusavolt.id &bull; <span class="text-nusalime">@nusavolt</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kolom Form Konsultasi -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-xl">
+                        <h3 class="font-display font-bold text-2xl text-nusadark mb-1">Jadwalkan Konsultasi Gratis</h3>
+                        <p class="text-slate-500 text-sm mb-6">Isi formulir di bawah ini, spesialis energi kami akan segera menghubungi Anda.</p>
+
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Nama Lengkap</label>
+                                    <input type="text" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-nusagreen focus:ring-2 focus:ring-nusagreen/20 outline-none text-sm transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Nomor WhatsApp</label>
+                                    <input type="tel" required placeholder="0812 xxxx xxxx" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-nusagreen focus:ring-2 focus:ring-nusagreen/20 outline-none text-sm transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Jenis Properti</label>
+                                    <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-nusagreen focus:ring-2 focus:ring-nusagreen/20 outline-none text-sm bg-white">
+                                        <option value="rumah">Rumah Tinggal</option>
+                                        <option value="bisnis">Kantor / Komersial</option>
+                                        <option value="industri">Pabrik / Industri</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Kota / Lokasi</label>
+                                    <input type="text" required placeholder="Contoh: Bandung" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-nusagreen focus:ring-2 focus:ring-nusagreen/20 outline-none text-sm transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Pesan atau Kebutuhan</label>
+                                <textarea rows="3" placeholder="Ceritakan kebutuhan kapasitas listrik atau pertanyaan Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-nusagreen focus:ring-2 focus:ring-nusagreen/20 outline-none text-sm transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-nusadark hover:bg-nusagreen text-white font-bold py-3.5 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Kirim Permintaan Konsultasi</span>
+                            </button>
+                        </form>
+
+                        <!-- Notifikasi Sukses (Pengganti alert) -->
+                        <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-nusagreen shrink-0"></i>
+                            <span>Terima kasih! Permintaan konsultasi Anda telah diterima oleh tim <strong>NusaVolt</strong>. Kami akan segera menghubungi Anda.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Bottom -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                    <span class="font-display font-bold text-base text-white">Nusa<span class="text-nusalime">Volt</span></span>
+                    <span>&bull; Energi untuk Indonesia yang Lebih Hijau</span>
+                </div>
+                <p>&copy; 2026 NusaVolt Indonesia. Seluruh hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+
+        // Toggle Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tutup mobile menu saat link diklik
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Kalkulator Penghematan Interaktif
+        const billSlider = document.getElementById('bill-slider');
+        const billDisplay = document.getElementById('bill-display');
+        const yearlySaving = document.getElementById('yearly-saving');
+        const systemSize = document.getElementById('system-size');
+        const co2Saved = document.getElementById('co2-saved');
+
+        function formatRupiah(angka) {
+            return 'Rp ' + angka.toLocaleString('id-ID');
+        }
+
+        function updateCalculator() {
+            const monthlyBill = parseInt(billSlider.value, 10);
+            billDisplay.textContent = formatRupiah(monthlyBill);
+
+            // Estimasi penghematan ~60% per bulan * 12 bulan
+            const annualSave = Math.round(monthlyBill * 0.6 * 12);
+            yearlySaving.textContent = formatRupiah(annualSave);
+
+            // Estimasi kapasitas sistem (kWp)
+            const kwp = (monthlyBill / 750000).toFixed(1);
+            systemSize.textContent = kwp + ' kWp';
+
+            // Estimasi reduksi karbon per tahun
+            const co2 = (kwp * 0.94).toFixed(1);
+            co2Saved.textContent = co2 + ' Ton';
+        }
+
+        billSlider.addEventListener('input', updateCalculator);
+        updateCalculator();
+
+        // Penanganan Submit Form Kontak tanpa alert()
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>
